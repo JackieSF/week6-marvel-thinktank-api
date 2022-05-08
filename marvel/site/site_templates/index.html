@@ -1,0 +1,76 @@
+
+   
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat, msg in messages %}
+                {% if cat == 'user-created' or cat == 'auth-success' %}
+                <div class="alert alert-success">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert">Endgame</button>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+    <div class="container">
+        <header class="row">
+            <div class="col-12 col-md-6" id="header-text">
+                <h2>Time to assemble your team: the bootleg Avengers</h2>
+                <div>
+                    <button class="btn btn-primary">browse characters</button>
+                    <button class="btn btn-primary">choose a new team name</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="../../static/images/undraw_server_status_5pbv.svg" alt="hero image" class="header-image">
+            </div>
+        </header>
+
+        <section class="row">
+            <div class="col-12 col-md-4" >
+                <h2>I am groot!</h2>
+                <p>I am groot?</p>
+            </div>
+        </section>
+        <!-- End of middle section -->
+        <!-- Start of Features -->
+        <section class="row" id="features-section">
+            <div class="col-12 col-md-4">
+                <img src="/marvel/static/images/panther.webp">
+                <h4>Wakanda Foeva</h4>
+                <p>Black Panther</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="/marvel/static/images/cap.jpeg.crdownload">
+                <h4>The marvel superman</h4>
+                <p>OG Steve</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="/marvel/static/images/iron.jpeg">
+                <h4>Drunk Elon</h4>
+                <p>Iron trying to stop my heart Man</p>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12 col-md-6">
+                <img src="/marvel/static/images/thor.webp" >
+            </div>
+            <div class="col-12 col-md-6">
+                <h4>come, talk to papa</h4>
+                <p> 
+                   grab a beer and have a heart to heart with big papa Thor
+                </p>
+                <div>
+                    <button class="btn btn-primary">grab a beer</button>
+                    <button class="btn btn-primary">rub his gut</button>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+{% endblock content %}

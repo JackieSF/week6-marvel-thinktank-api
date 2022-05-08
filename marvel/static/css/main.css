@@ -1,0 +1,35 @@
+/* Navigation Styling */
+.ct-nav{
+    display: flex;
+    justify-content: center;
+}
+
+.ct-nav img{
+    width: 25%;
+    max-width: 100%;
+    margin-left: 2vw;
+}
+
+#horizontal-list{
+    min-width: 55vw;
+    list-style: none;
+    padding-top: 6vh;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+}
+
+#horizontal-list a:nth-last-child(1){
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin-right: 0.2vw;
+}
+
+body {
+    background-image: url("/marvel/static/images/groot.webp")
+    background-color: solid yellow;
+}
